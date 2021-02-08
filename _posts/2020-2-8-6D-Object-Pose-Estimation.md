@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Continual Learning Basics
+title: Overview 6D Object Pose Estimation
 ---
 
 In this post we will have a first glance into continual learning.

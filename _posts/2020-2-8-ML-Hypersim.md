@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Continual Learning Basics
+title: ML Hypersim Dataset
 ---
 
 In this post we will have a first glance into continual learning.

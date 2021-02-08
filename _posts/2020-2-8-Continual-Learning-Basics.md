@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Continual Learning Basics
+title: Continual Learning - Basics
 ---
 
 In this post we will have a first glance into continual learning.
