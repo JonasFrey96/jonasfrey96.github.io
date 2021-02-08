@@ -4,12 +4,15 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hello my name is Jonas Frey. I am currently a student at the ETH Zurich in Robotics Systems and Control.
+This block documents my personal projects and especially my master's thesis.
+I will write small blog posts about interesting topics I dive into while undertaking my master's thesis.
 
-### More Information
+This block documents my way to my master's degree. 
 
-A place to include any other types of information that you'd like to include about yourself.
+
+Best Jonas
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[jonfrey@ethz.ch](mailto:jonfrey@ethz.ch)
