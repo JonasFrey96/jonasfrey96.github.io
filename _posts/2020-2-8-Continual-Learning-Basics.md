@@ -23,8 +23,15 @@ We therefore entangle exploration and learning.
 
 
 ### Plasticity-stability
+Plasticity is term used in biology to describe the ability of a brain to aquire and learn new knowledge. A major part of the capability of the human brain is established by rougly 10^11 neorons. Each neuron is in average connected by 7000 synapses to other neurons. To incorporate new knowledge the neurons are constantly rewired. Stability on the other hand describes the pheonomen that we are able to keep a stable memory and representation of our aquired knowledge.
+
+<![_config.yml]({{ site.baseurl }}/images/continual-learning/plasticity.png)>
+
+When training neural networks both of these properties are desirable but also counteract each other. For example a DNN is able to perfectly fit data given for a new task, when no constaint of perserving the knowledge learned for the previous task. Therfore the plastisticy in this form of training is maximed. The oher way around if we do not change any parameters in our neural network when faceing a new task stability is perfectly garuanted but on the down side nothing new is learned. In continual learning we face the problem of simultaneously allowing plastisticy and preserving stability.
+
 
 ### Adaptability and Scalability
+
 
 ### Difference to RL
 
@@ -50,7 +57,7 @@ Constraints:
 ## Continual Learning Scenarios:
 Steam or Online Learning
 - samples are visited only once
-
+s
 Sequential Task Learning
 - relaxes constraints
 - batch learning
@@ -59,6 +66,8 @@ Sequential Task Learning
 
 
 ## Continual Learning Algorithms:
+<![_config.yml]({{ site.baseurl }}/images/continual-learning/types.png)>
+
 
 ### Regularization
 

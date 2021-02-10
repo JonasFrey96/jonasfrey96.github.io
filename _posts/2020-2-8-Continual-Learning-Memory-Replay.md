@@ -20,7 +20,6 @@ Explain everything
 What do we want to achieve.
 Support Vector Graphics
 
-
 - random
 - criterion driven:
   - uncertainity
