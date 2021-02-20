@@ -6,58 +6,120 @@ title: Continual Learning - Basics
 In this post we will have a first glance into continual learning.
 
 ## Motivation
-Currently machine learning relies on large datasets that densely sample the data distribution of of the target domain to achieve a generalizing to the test data domain.
-Currently DNNs are trained by gradient based methods which rely on the notion of independent and identically distributed samples. (i.i.d)
-A batch of randomly selected samples is used in stochastic gradient descent to calculate the weight update for the neural network. 
-This procedure has shown great success on a variety of tasks but this approach suffers multiple limitation:
+Currently machine learning relies on large datasets that densely sample the data distribution of of the target domain to achieve a generalizing to the test data.
+Most architectures employ rely on gradient based optimization procedure which rely on the assumption of independent and identically distributed samples (i.i.d). This assumption is necessary such that the gradient points towards a meaningful direction that leads to good convergence behavior and avoids local minimas.
+This procedure has shown great success on a variety of tasks but this training procedure comes with intrinsic limitations:
 
-1. Changing data distribution
+
+
+### Distribution Change
+
+<img src="{{ site.baseurl }}/images/data_distributions.jpg" alt="drawing" width="400"/>
+
+**Domain Shift**: It is often the case that your available training data does not align with your target data domain.
+There might be a complete domain shift, i.e. when you train on data generated in a simulator and perform inference on real world data. (Sim-To-Real Usecase) 
+<img src="{{ site.baseurl }}/images/sim_to_real.png" alt="drawing" height="100"/>
+
+**Temporal Domain Shift**:
 In a lot of scenarios the target domain undergoes temporal changes.
-For example when recognizing the street in an autonomous vehicle the appearance of the street changes from day to night or across seasons.
-An other example might be if you want to have a model that learns about political landscape across nations. Given that the leaders change over time the network needs to be capable to constantly incorporate new know about politics. Otherwise it is not able to know that Joe Biden is the current president of the United States. 
-In the later scenario its clear that integrating knowledge over time is essential. This is currently done bei either fine-tuning the network or fully retraining the network on an enriched dataset that includes data that has to be collected from the shifted domain.For large scale networks this is time and resource intensive.
+For example when recognizing the street in an autonomous vehicle the appearance of the street changes from day to night and across seasons.
+An other example might be if you want to have a model that learns about political landscape across nations. 
+
+### Does this boild down to generalization?
+Why do we want to research continual learning? One might argue that in both cases the problem is a lack of data. In theory we can scale up the training dataset and include examples that we were previously not able to predict correctly. Therefore our networks would be able to generalize to a larger data domain. We would not need to invest time and resources with continual learning.
+This procedure is currently done by either fine-tuning the network or fully retraining the network on an enriched dataset that includes data that has to be collected from the shifted domain.
+
+
+
+But there are multiple reasons why this is not the right way going forward.  
+**1. Cost:** Retraining a network from scratch is expensive and a single large scale language model can cost multiple 100k$ to train. With growing network sizes this problem will even get worse in the future.  
+**2. Non-stationary data:** Given that our world is highly dynamic the data distribution is constantly changing. For some applications given the fast change of the data retraining from scratch is simply impossible.  
+**3. Supervision:** When creating a dataset the highest investment is not the collection of the data but the labeling of it. Therefore constantly enlarging the dataset is expensive.    
+
+
+<!-- Given that the leaders change over time the network needs to be capable to constantly incorporate new know about politics. Otherwise it is not able to know that Joe Biden is the current president of the United States.
+
+In the later scenario its clear that integrating knowledge over time is essential. This is currently done bei either fine-tuning the network or fully retraining the network on an enriched dataset that includes data that has to be collected from the shifted domain.For large scale networks this is time and resource intensive. -->
 ### Human Learning as a role model
-Humans are capable to learn from a continual stream of incoming sensory information. 
-A human is able to actively explore his environment and make us of the incoming information by its environment. 
-We therefore entangle exploration and learning.
+<img src="{{ site.baseurl }}/images/learning_comic.jpg" alt="drawing" width="300"/>
+
+Humans are capable to learn from a continual stream of incoming sensory information.
+We are able to actively explore our environment and make use of the incoming information. 
+Our brain therefore (while fully functioning) performs continual learning, which has shown to be a evolutionary advantage compared to other species.
+Our brain also functions as an exemplar that we can integrate new knowledge despite we are constrained by the size(physical mass, number of neurons and synapses) of the brain.
 
 
-### Plasticity-stability
-Plasticity is term used in biology to describe the ability of a brain to aquire and learn new knowledge. A major part of the capability of the human brain is established by rougly 10^11 neorons. Each neuron is in average connected by 7000 synapses to other neurons. To incorporate new knowledge the neurons are constantly rewired. Stability on the other hand describes the pheonomen that we are able to keep a stable memory and representation of our aquired knowledge.
+### Plasticity-stability dilemma
+**Plasticity** is term used in biology to describe the ability of a brain to acquire, learn or integrate new knowledge. The major functionality of the human brain is established by round about 10^11 neurons. Each neuron is in average connected by 7000 synapses to other neurons. To incorporate new knowledge the neurons are constantly rewired. **Stability** on the other hand describes the phenomenon that we are able to keep a stable memory and representation of our acquired knowledge.  
 
-<![_config.yml]({{ site.baseurl }}/images/continual-learning/plasticity.png)>
+<img src="{{ site.baseurl }}/images/continual-learning/plasticity.png" alt="drawing" height="300"/>
 
-When training neural networks both of these properties are desirable but also counteract each other. For example a DNN is able to perfectly fit data given for a new task, when no constaint of perserving the knowledge learned for the previous task. Therfore the plastisticy in this form of training is maximed. The oher way around if we do not change any parameters in our neural network when faceing a new task stability is perfectly garuanted but on the down side nothing new is learned. In continual learning we face the problem of simultaneously allowing plastisticy and preserving stability.
+When training neural networks both of these properties are desirable but also **counteract** each other. This is the reason why this is doubt the **Plasticity-stability dilemma**. For example a DNN is able to perfectly fit data given for a new task, when no constraint of preserving the knowledge learned for the previous task. Therefore the plasticity in this training procedure is maximized. The other way around if we do not change any parameters in our neural network when facing a new task stability is perfectly guaranteed but on the down side nothing new is learned. In continual learning we want to simultaneously maximize plasticity while preserving stability.
 
+<!-- ### Difference to RL
 
-### Adaptability and Scalability
-
-
-### Difference to RL
-
+<img src="{{ site.baseurl }}/images/rl.jpg" alt="drawing" height="200"/> -->
 
 ## Continual Learning Basics 
 
-Task
--task boundaries
+### **Task**
+We define a task T_i as a learning objective, where data x should be mapped to the label y. TheThis learning objective correspondences to finding a target function g: g(x)=y.
 
-Data
-- data size
-- type
+In this definition each task T_i indexed by i is defined as a separate learning experience.
+In reality often task boundaries are not clearly defined.
+Therefore the current learning task index i is not known.
+Also there might be overlap between the training data from one task and an other.
 
-Supervison
 
-Prior Knowledge
+### **Data**
+Each task T_i is associated with a dataset which contains data
+<img src="https://render.githubusercontent.com/render/math?math=\mathit{D} = \{ \mathbf{x}_i, \mathbf{y}_i \}">  
+The datasets might vary in size and data-types.
+One task might be detection cars from images. 
+The other recognizing pedestrians from RADAR data.
 
-Constraints:
-- Computation
-- Memory
+### **Supervison**  
+<img src="{{ site.baseurl }}/images/supervision.jpg" alt="drawing" width="400"/>  
+
+It is important when formulating a continual learning scenario which kind of supervision is given. We can categorize datasets into the following categories:
+
+**1. Supervised:** For **ALL** training examples x_j a correct label y_j is available.
+This is the most expensive data given the cost of labeling. 
+On the other hand fully supervised learning results often in the best performance.
+
+**2. Semi-Supervised:** For **SOME** training examples x_j a correct label y_j is available.
+This is often used when labeling is expensive but large amount of data is available.
+
+**3. Un-Supervised:** For **NON** training example a supervision single is present.
+This is commonly used for clustering or in scenarios where a supervision signal can be generated by the model.
+For example in language models are trained to predict the next word in a sentence.
+The training signal is created by masking the original sentence without any human supervision.
+
+
+### **Prior Knowledge**  
+What information do we know about the learning Task. 
+Can we integrate this knowledge into our model or training procedure. 
+One example might be when performing object classification in images. Here we know it dose not matter where a object is present in the image. Therefore translation invariance would be a great property for our model architecture. This is achieved by using convolutional filters. Therfore when we manually design our model architecture we can encode our prior knowledge about the task,  
+When we know a-priori when a new task T_i start we can use this information for tuning our training strategy. 
+
+
+### **Constraints**  
+- Computation:  
+How fast do we need to integrate the new knowledge. (Training Time / Hardware)  
+How fast do we need to perform inference. (Inference Time / Hardware)  
+
+- Memory:  
+What are the memory limitations.
+GPU Memory Size / Model Size, Memory size, Size of a Single Datapoint, Number of Datapoints, Write/Read Speed of the Memory (RAM -> GPU, SSD -> GPU, HDD -> GPU))
 
 
 ## Continual Learning Scenarios:
+
+<img src="{{ site.baseurl }}/images/stream_sequential.jpg" alt="drawing" width="400"/>
+
 Steam or Online Learning
 - samples are visited only once
-s
+
 Sequential Task Learning
 - relaxes constraints
 - batch learning
@@ -65,19 +127,35 @@ Sequential Task Learning
 - example of MNIST digit classification
 
 
-## Continual Learning Algorithms:
-<![_config.yml]({{ site.baseurl }}/images/continual-learning/types.png)>
+## Continual Learning Strategies:
 
+
+### Architectual
+<img src="{{ site.baseurl }}/images/architectual.jpg" alt="drawing" width="400"/>  
+
+For each new task the model architecture is expanded.
+Given that a new task increases the overall data complexity it is reasonable to also increase the model complexity.
+Most of the time separate task specific prediction heads are added to the model. 
+The common layers can be interpreted as a backbone feature extraction module that has to extract good features over all tasks (shown in grey). The task specific layers only have to handle data points by its task. Therefore these layers are highly specialized for each task.
+It's clear that this procedure is limited when no clear task boundaries are present.
 
 ### Regularization
+<img src="{{ site.baseurl }}/images/regularization.jpg" alt="drawing" width="400"/>  
 
-### Architectural
+There a multiple studied regularization approaches. One might freeze specific layers in the model architecture when training for a new task. An other approach might be penalize the weight shift of the model compared to the weight when trained for the previous task. 
+The underlying assumption is that the performance on the previous task will be better when the network weights ("The learned mapping from x to y") is not changing drastically when training for a new task. This regularization should reduce overfitting on the new task and might be compared to classic L2 penalty in linear regression. In linear regression the L2 penalty functions as a penalty term to find a simple model that fits the data best. In our scenario the penalty term motivates to find a model that is close (in weight space) to the model
+
+<img src="{{ site.baseurl }}/images/model_weights.jpg" alt="drawing" width="600"/>  
+
+In the above figure the weight spaces of our model is illustrated. For simplicity our model consists of 2 weights w1 and w2.
+When training for Task T_1 the optimal parameters w_T1^* was found. Now the equipotential lines for T_2 are illustrated. Without any regularization we would obtain w_T_2^* as our new optima. (left Figure.)
+Given the constraint that our new parameters should be close in weight space the loss landscape is modified and w\hat_t2 is the found optima. 
 
 ### Rehearsal
+<img src="{{ site.baseurl }}/images/replay.jpg" alt="drawing" width="400"/>
+
 ### Generative Replay
+<img src="{{ site.baseurl }}/images/generative.jpg" alt="drawing" width="400"/>
 
 
 
-
-
-<!-- <![_config.yml]({{ site.baseurl }}/images/config.png)> -->

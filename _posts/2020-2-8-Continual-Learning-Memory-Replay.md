@@ -3,7 +3,7 @@ layout: post
 title: Continual Learning - Memory Replay
 ---
 
-# Motivation
+## Motivation
 Why memory buffers.
 
 ## Math Section:
