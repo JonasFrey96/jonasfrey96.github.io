@@ -36,7 +36,9 @@ Allows for online-domain adaptation to novel environments. Utilizing tools of th
 
 **Repository**: [https://github.com/JonasFrey96/ASL](https://github.com/JonasFrey96/ASl) 
 
-**Supervisors**: Hermann Blum, Milano Francesco, Dr. Cadena Lerma, Prof. Roland Siegwart
+**Supervisors**: Hermann Blum, Milano Francesco, Dr. Cadena Lerma, Prof. Roland Siegwart  
+  
+<br />
 
 ### 2021 - Visual Odometry Pipeline
 
@@ -44,18 +46,18 @@ Allows for online-domain adaptation to novel environments. Utilizing tools of th
 	<img align="middle" src="https://github.com/JonasFrey96/Visual-Odom-Pipeline/blob/master/docs/kitti.gif?raw=true" alt="Logo"/>
 </p>
 
-
 **Scope**: Lecture by Robotics and Perception Group (http://rpg.ifi.uzh.ch/index.html)[PRG] University of Zurich
 
 **Objective**: Implementation of a Visual Odometry Pipeline including Bundle Adjustment from Scratch using OpenCV.
 Including local bundle adjustment, evaluation on recorded dataset and benchmarking on various other datasets.
 
-
 **Tools**: Python, OpenCV
 
 **Repository**: [https://github.com/JonasFrey96/Visual-Odom-Pipeline]()
 
-**Collaborators**: Carter Fang
+**Collaborators**: Carter Fang  
+  
+<br />
 
 ### 2020 - FlowPose6D: Flow Driven 6D Pose Estimation
 
@@ -70,7 +72,10 @@ Evaluated on the YCB-Video Dataset
 
 **Repository**: [https://github.com/JonasFrey96/FlowPose6D](https://github.com/JonasFrey96/FlowPose6D)
 
-**Supervisor**: Blomqvist Kenneth Tor, Prof. Roland Siegwart
+**Supervisor**: Blomqvist Kenneth Tor, Prof. Roland Siegwart  
+  
+<br />
+
 ### 2020 - ARBotics: Simulation and visualization framework in AR for robotic systems based on ROS
 
 <p float="middle">
@@ -80,7 +85,6 @@ Evaluated on the YCB-Video Dataset
 
 **Scope**: Fun Project + 3D Vision ([CVG ETH Zurich](https://www.cvg.ethz.ch/teaching/3dvision/) & [Microsoft Mixed Reality & AI Lab](https://www.microsoft.com/en-us/research/lab/mixed-reality-ai-zurich/))  
 
-
 **Objective**:
 A soft real-time interactive simulation and visualization framework in AR for robotic systems based on ROS. This project allows you to integrate Augmented Reality / Mixed Reality (AR/MR) applications in your ROS based robotic system easily. It provides functionalities for an easy setup and configuration, utilizes commonly used tools and standards (urdf files, etc.) and is easily extendable.
 
@@ -88,8 +92,9 @@ A soft real-time interactive simulation and visualization framework in AR for ro
 
 **Repository**: [https://github.com/EricVoll/ARbotics ]( https://github.com/EricVoll/ARbotics )
 
-**Collaborators**: Eric Vollenweider, Raffael Theiler, Turcan Tuna
-
+**Collaborators**: Eric Vollenweider, Raffael Theiler, Turcan Tuna  
+  
+<br />
 
 ### 2019 - SEW-EURODRIVE Handling assistant
 <p float="middle">
@@ -107,7 +112,10 @@ Allowing bin picking operation of a mobile robot at different stations in an ind
 
 **Tools**: ROS, C++, PLC Programming IEC-61131-3, Ensenso N35 Camera, Kuka Agilus
 
-**Project Homepage**: https://www.sew-eurodrive.de/automation/factory-automation/mobile-assistance-systems/handling-assistants/handling-assistants.html
+**Project Homepage**: [https://www.sew-eurodrive.de/automation/factory-automation/mobile-assistance-systems/handling-assistants/handling-assistants.html]()  
+  
+<br />
+  	
 ### 2018 - Dynamical Deformation Network: 
 
 **Scope**: Bachelor`s Thesis Nara Institute of Science and Technology (Japan)
@@ -119,8 +127,9 @@ Non-parametric learning of deformation properties of soft-object under external 
 **Tools**: Python, C++ 11, Tensorflow, ROS, Universal Robot 5, Intel Realsense 
 
 **Supervised**: Prof. Takamitsu Matsubara (NAIST), Prof. Tamim Asfour (KIT)
-
-
+  
+<br />
+  
 ### 2016-2018 - Humanoid Robot ARMAR-6:  
 <p float="right">
 	<img align="right" src="https://h2t.anthropomatik.kit.edu/img/A6_cropped_hq_fixed_tablet4_rdax_1200x2048.png" alt="Logo" height = "250"/>
@@ -137,12 +146,16 @@ A High-Performance Humanoid for Human-Robot Collaboration in Real-World Scenario
 
 **Supervised**: Lukas Kaul, Prof. Tamim Asfour (KIT)
 
+<br />
+
 ### 2008-2015 - RoboCup Junior:
 
 **Scope**: Highschool Robotics
 
 **Objective**:
 We successfully participated for 7 years at the RoboCup Junior in all available categories including Soccer, Rescue and Dance. We started out building small robots using Lego Mindstorms and transitioned to manufacturing and layouting costume PCBs, CNC, laser cutted parts and programmed robots from scratch. We developed costume sensors that helped the robot to autonomously achieve their task and even established connectivity between multiple robots for coordinaten. We used motors, IMU, ultrasonics-sensor, cameras, light sensor, infrared sensors. We mainly used C and C++ for programming and relied on ATMEL microcontrollers starting with Arduinos and the typical Maker/DIY scene. 
+
+<br />
 
 ## Thanks
 
