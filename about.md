@@ -151,7 +151,7 @@ A High-Performance Humanoid for Human-Robot Collaboration in Real-World Scenario
 **Scope**: High-School Robotics
 
 **Objective**:
-We successfully participated for 7 years at the RoboCup Junior in all available categories including Soccer, Rescue and Dance. We started out building small robots using Lego Mindstorms and transitioned to manufacturing and layouting costume PCBs, CNC, laser cutted parts and programmed robots from scratch. We developed costume sensors that helped the robot to autonomously achieve their task and even established connectivity between multiple robots for coordinaten. We used motors, IMU, ultrasonics-sensor, cameras, light sensor, infrared sensors. We mainly used C and C++ for programming and relied on ATMEL microcontrollers starting with Arduinos and the typical Maker/DIY scene. 
+We successfully participated for 7 years at the RoboCup Junior in all available categories including Soccer, Rescue and Dance. We started out building small robots using Lego Mindstorms and transitioned to manufacturing and layouting costume PCBs, CNC, laser cutted parts and programmed robots from scratch. We developed costume sensors that helped the robot to autonomously achieve their task and even established connectivity between multiple robots for coordination. We used motors, IMU, ultrasonics-sensor, cameras, light sensor, infrared sensors. We mainly used C and C++ for programming and relied on ATMEL microcontrollers starting with Arduinos and the typical Maker/DIY scene. 
 
 <br />
 
