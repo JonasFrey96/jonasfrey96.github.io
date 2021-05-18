@@ -13,12 +13,19 @@ I will write small blog posts about interesting topics I dive into while underta
 This block documents my way to my master's degree. 
 Everything I publish is just my personal opinion and I am not representing the ETH or an other affiliated institutions.
 
-Contact me: [jonfrey@ethz.ch](mailto:jonfrey@ethz.ch)  
-GitHub: JonasFrey96
-
+**Contact me:** [jonfrey@ethz.ch](mailto:jonfrey@ethz.ch)  
+**GitHub:** [https://github.com/JonasFrey96/]()  
+**LinkedIn:** [www.linkedin.com/in/jonasfrey96]()  
+**CV:** [ Jonas_Frey_CV.pdf ](<https://github.com/JonasFrey96/jonasfrey96.github.io/blob/master/images/about/Jonas_Frey_CV.pdf>)
 ## Projects
 
 ### 2021 - Continual Learning of Semantic Segmentation for mobile Robots
+
+<p float="middle">
+	<img align="middle" src="{{ site.baseurl }}/images/about/MasterThesis_Previes.gif" alt="Logo"/>
+</p>
+
+
 **Scope**: Master`s Thesis at the Autonomous Systems Lab (ETH Zurich) 
 
 **Objective**:  Allowing mobile robots to integrate new knowledge acquired during a mission into a pre-trained semantic segmentation network unsupervised. 
@@ -28,25 +35,28 @@ Allows for online-domain adaptation to novel environments. Utilizing tools of th
 
 **Repository**: [https://github.com/JonasFrey96/ASL](https://github.com/JonasFrey96/ASl) 
 
-
+**Supervisors**: Hermann Blum, Milano Francesco, Dr. Cadena Lerma, Prof. Roland Siegwart  
+  
+<br />
 
 ### 2021 - Visual Odometry Pipeline
-
-**Scope**: Lecture by Robotics and Perception Group (http://rpg.ifi.uzh.ch/index.html)[PRG] University of Zurich
 
 <p float="middle">
 	<img align="middle" src="https://github.com/JonasFrey96/Visual-Odom-Pipeline/blob/master/docs/kitti.gif?raw=true" alt="Logo"/>
 </p>
 
+**Scope**: Lecture by Robotics and Perception Group (http://rpg.ifi.uzh.ch/index.html)[PRG] University of Zurich
 
 **Objective**: Implementation of a Visual Odometry Pipeline including Bundle Adjustment from Scratch using OpenCV.
 Including local bundle adjustment, evaluation on recorded dataset and benchmarking on various other datasets.
-
 
 **Tools**: Python, OpenCV
 
 **Repository**: [https://github.com/JonasFrey96/Visual-Odom-Pipeline]()
 
+**Collaborators**: Carter Fang  
+  
+<br />
 
 ### 2020 - FlowPose6D: Flow Driven 6D Pose Estimation
 
@@ -61,6 +71,9 @@ Evaluated on the YCB-Video Dataset
 
 **Repository**: [https://github.com/JonasFrey96/FlowPose6D](https://github.com/JonasFrey96/FlowPose6D)
 
+**Supervisor**: Blomqvist Kenneth Tor, Prof. Roland Siegwart  
+  
+<br />
 
 ### 2020 - ARBotics: Simulation and visualization framework in AR for robotic systems based on ROS
 
@@ -71,7 +84,6 @@ Evaluated on the YCB-Video Dataset
 
 **Scope**: Fun Project + 3D Vision ([CVG ETH Zurich](https://www.cvg.ethz.ch/teaching/3dvision/) & [Microsoft Mixed Reality & AI Lab](https://www.microsoft.com/en-us/research/lab/mixed-reality-ai-zurich/))  
 
-
 **Objective**:
 A soft real-time interactive simulation and visualization framework in AR for robotic systems based on ROS. This project allows you to integrate Augmented Reality / Mixed Reality (AR/MR) applications in your ROS based robotic system easily. It provides functionalities for an easy setup and configuration, utilizes commonly used tools and standards (urdf files, etc.) and is easily extendable.
 
@@ -79,11 +91,17 @@ A soft real-time interactive simulation and visualization framework in AR for ro
 
 **Repository**: [https://github.com/EricVoll/ARbotics ]( https://github.com/EricVoll/ARbotics )
 
-**Collaborators**: Eric Vollenweider, Raffael Theiler, Turcan Tuna
-
+**Collaborators**: Eric Vollenweider, Raffael Theiler, Turcan Tuna  
+  
+<br />
 
 ### 2019 - SEW-EURODRIVE Handling assistant
-
+<p float="middle">
+	<img align="middle" src="https://master.sew-eurodrive.com/media/sew_eurodrive/videos/industrie_4_1/griff_in_die_kiste_390x220.jpg" alt="Logo" width = "350"/>
+	<img align="middle" src="https://master.sew-eurodrive.com/media/sew_eurodrive/automatisierung/mfa/handling-assistant-up-to-400kg_800x450.jpg" alt="Logo" width = "350"/>
+	 
+</p>  
+  
 **Scope**: Full-Time Robotics Engineer
 
 **Objective**:
@@ -93,7 +111,10 @@ Allowing bin picking operation of a mobile robot at different stations in an ind
 
 **Tools**: ROS, C++, PLC Programming IEC-61131-3, Ensenso N35 Camera, Kuka Agilus
 
-**Project Homepage**: https://www.sew-eurodrive.de/automation/factory-automation/mobile-assistance-systems/handling-assistants/handling-assistants.html
+**Project Homepage**: [https://www.sew-eurodrive.de/automation/factory-automation/mobile-assistance-systems/handling-assistants/handling-assistants.html]()  
+  
+<br />
+  	
 ### 2018 - Dynamical Deformation Network: 
 
 **Scope**: Bachelor`s Thesis Nara Institute of Science and Technology (Japan)
@@ -104,24 +125,40 @@ Non-parametric learning of deformation properties of soft-object under external 
 
 **Tools**: Python, C++ 11, Tensorflow, ROS, Universal Robot 5, Intel Realsense 
 
+**Supervised**: Prof. Takamitsu Matsubara (NAIST), Prof. Tamim Asfour (KIT)
+  
+<br />
+  
 ### 2016-2018 - Humanoid Robot ARMAR-6:  
+<p float="right">
+	<img align="right" src="https://h2t.anthropomatik.kit.edu/img/A6_cropped_hq_fixed_tablet4_rdax_1200x2048.png" alt="Logo" height = "250"/>
+</p>
 
 **Scope**: Research Assistant at the Chair for High Performance Humanoid Technologies (Karlsruhe Institute of Technology)
 
 **Objective**:
 A High-Performance Humanoid for Human-Robot Collaboration in Real-World Scenarios. I significantly contributed from design to the implementation the Power and Battery Management System. It allows hot-plug functionality, recharging, safety precautions, delivering 100A @ 48V and between 2-4h battery operation. Established the basis for numerous downstream research results and experiments.
 
-
 **Project Homepage**: [https://h2t.anthropomatik.kit.edu/english/397.php]()  
+
 **Resulting Project Paper**: [https://ieeexplore.ieee.org/document/8886589]()
 
+**Supervised**: Lukas Kaul, Prof. Tamim Asfour (KIT)
 
+<br />
 
+### 2008-2015 - RoboCup Junior:
 
+**Scope**: Highschool Robotics
+
+**Objective**:
+We successfully participated for 7 years at the RoboCup Junior in all available categories including Soccer, Rescue and Dance. We started out building small robots using Lego Mindstorms and transitioned to manufacturing and layouting costume PCBs, CNC, laser cutted parts and programmed robots from scratch. We developed costume sensors that helped the robot to autonomously achieve their task and even established connectivity between multiple robots for coordinaten. We used motors, IMU, ultrasonics-sensor, cameras, light sensor, infrared sensors. We mainly used C and C++ for programming and relied on ATMEL microcontrollers starting with Arduinos and the typical Maker/DIY scene. 
+
+<br />
 
 ## Thanks
 
-Special thanks to Dr. Cadena Lerma, Cesar Dario (ETH Zurich, ASL) for pushing me to start writing blog articels.
+Special thanks to Dr. Cadena Lerma, Cesar Dario (ETH Zurich, ASL) for pushing me to start writing blog articles.
 Also thanks for all the supervision during my masters to:
 Hermann Blum, 
 Blomqvist Kenneth Tor,
