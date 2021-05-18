@@ -6,11 +6,9 @@ permalink: /about/
 
 Hello my name is Jonas Frey. 
 
-I am currently master student at the **ETH Zurich** in **Robotic, Systems and Control**.
-This block documents my personal projects and especially my master's thesis.
-I will write small blog posts about interesting topics I dive into while undertaking my master's thesis.
+I am currently a master student at the **ETH Zurich** in **Robotic, Systems and Control**.
+This blog documents my personal projects and especially my master's thesis.
 
-This block documents my way to my master's degree. 
 Everything I publish is just my personal opinion and I am not representing the ETH or any other affiliated institutions.
 
 **Contact me:** [jonfrey@ethz.ch](mailto:jonfrey@ethz.ch)  
