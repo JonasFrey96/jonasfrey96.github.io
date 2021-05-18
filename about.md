@@ -8,6 +8,7 @@ Hello my name is Jonas Frey.
 
 I am currently a master student at the **ETH Zurich** in **Robotic, Systems and Control**.
 This blog documents my personal projects and especially my master's thesis.
+I will dive into topics I personally find interesting and worth sharing.
 
 Everything I publish is just my personal opinion and I am not representing the ETH or any other affiliated institutions.
 
@@ -64,7 +65,7 @@ Including local bundle adjustment, evaluation on recorded dataset and benchmarki
 	<img align="left" src="https://github.com/JonasFrey96/FlowPose6D/blob/master/docs/overview_network.png?raw=true" alt="Logo"/>
 </p>
  
-**Objective**: Leveraging state of the art methods for 6D object pose estimation and tracking to allow further downstream robotics applications including planning, manipulation, interaction. Focusing on instance level object detection with known geometric and visual information of rigid objects. Leverages state of the art optical flow estimation methods to establish correspondences between the rendered believed object pose and the captured RGB image. Real-time capable and fully funciting.
+**Objective**: Leveraging state of the art methods for 6D object pose estimation and tracking to allow further downstream robotics applications including planning, manipulation, interaction. Focusing on instance level object detection with known geometric and visual information of rigid objects. Leverages state of the art optical flow estimation methods to establish correspondences between the rendered believed object pose and the captured RGB image. Real-time capable and fully functioning.
 Evaluated on the YCB-Video Dataset
 
 **Repository**: [https://github.com/JonasFrey96/FlowPose6D](https://github.com/JonasFrey96/FlowPose6D)
