@@ -11,7 +11,7 @@ This block documents my personal projects and especially my master's thesis.
 I will write small blog posts about interesting topics I dive into while undertaking my master's thesis.
 
 This block documents my way to my master's degree. 
-Everything I publish is just my personal opinion and I am not representing the ETH or an other affiliated institutions.
+Everything I publish is just my personal opinion and I am not representing the ETH or any other affiliated institutions.
 
 **Contact me:** [jonfrey@ethz.ch](mailto:jonfrey@ethz.ch)  
 **GitHub:** [https://github.com/JonasFrey96/]()  
@@ -26,7 +26,7 @@ Everything I publish is just my personal opinion and I am not representing the E
 </p>
 
 
-**Scope**: Master`s Thesis at the Autonomous Systems Lab (ETH Zurich) 
+**Scope**: Master's Thesis at the Autonomous Systems Lab (ETH Zurich) 
 
 **Objective**:  Allowing mobile robots to integrate new knowledge acquired during a mission into a pre-trained semantic segmentation network unsupervised. 
 Allows for online-domain adaptation to novel environments. Utilizing tools of the continual learning community to a real world problem. 
@@ -66,7 +66,7 @@ Including local bundle adjustment, evaluation on recorded dataset and benchmarki
 	<img align="left" src="https://github.com/JonasFrey96/FlowPose6D/blob/master/docs/overview_network.png?raw=true" alt="Logo"/>
 </p>
  
-**Objective**: Leveraging state of the art methods for 6D object pose estimation and tracking to allow further downstream robotics applications including planning, manipulation, interaction. Focusing on instance level object detection with know geometric and visual information of rigid objects. Leverages state of the art optical flow estimation methods to establish corrospondences between the rendered beliefed object pose and the captured RGB image. Real-time capable and fully funciting.
+**Objective**: Leveraging state of the art methods for 6D object pose estimation and tracking to allow further downstream robotics applications including planning, manipulation, interaction. Focusing on instance level object detection with known geometric and visual information of rigid objects. Leverages state of the art optical flow estimation methods to establish correspondences between the rendered believed object pose and the captured RGB image. Real-time capable and fully funciting.
 Evaluated on the YCB-Video Dataset
 
 **Repository**: [https://github.com/JonasFrey96/FlowPose6D](https://github.com/JonasFrey96/FlowPose6D)
@@ -117,11 +117,11 @@ Allowing bin picking operation of a mobile robot at different stations in an ind
   	
 ### 2018 - Dynamical Deformation Network: 
 
-**Scope**: Bachelor`s Thesis Nara Institute of Science and Technology (Japan)
+**Scope**: Bachelor's Thesis Nara Institute of Science and Technology (Japan)
 
 **Objective**:
 A deep generative model for 3d voxel object deformation using Kalman variational auto-encoder. 
-Non-parametric learning of deformation properties of soft-object under external forces. Application for robotic surgical systems, human tissue, food manipulation or cloth folding. 
+Non-parametric learning of deformation properties of soft-objects under external forces. Application for robotic surgical systems, human tissue, food manipulation or cloth folding. 
 
 **Tools**: Python, C++ 11, Tensorflow, ROS, Universal Robot 5, Intel Realsense 
 
@@ -137,7 +137,7 @@ Non-parametric learning of deformation properties of soft-object under external 
 **Scope**: Research Assistant at the Chair for High Performance Humanoid Technologies (Karlsruhe Institute of Technology)
 
 **Objective**:
-A High-Performance Humanoid for Human-Robot Collaboration in Real-World Scenarios. I significantly contributed from design to the implementation the Power and Battery Management System. It allows hot-plug functionality, recharging, safety precautions, delivering 100A @ 48V and between 2-4h battery operation. Established the basis for numerous downstream research results and experiments.
+A High-Performance Humanoid for Human-Robot Collaboration in Real-World Scenarios. I significantly contributed from design to the implementation of the Power and Battery Management System. It allows hot-plug functionality, recharging, safety precautions, delivering 100A @ 48V and between 2-4h battery operation. Established the basis for numerous downstream research results and experiments.
 
 **Project Homepage**: [https://h2t.anthropomatik.kit.edu/english/397.php]()  
 
@@ -149,7 +149,7 @@ A High-Performance Humanoid for Human-Robot Collaboration in Real-World Scenario
 
 ### 2008-2015 - RoboCup Junior:
 
-**Scope**: Highschool Robotics
+**Scope**: High-School Robotics
 
 **Objective**:
 We successfully participated for 7 years at the RoboCup Junior in all available categories including Soccer, Rescue and Dance. We started out building small robots using Lego Mindstorms and transitioned to manufacturing and layouting costume PCBs, CNC, laser cutted parts and programmed robots from scratch. We developed costume sensors that helped the robot to autonomously achieve their task and even established connectivity between multiple robots for coordinaten. We used motors, IMU, ultrasonics-sensor, cameras, light sensor, infrared sensors. We mainly used C and C++ for programming and relied on ATMEL microcontrollers starting with Arduinos and the typical Maker/DIY scene. 
