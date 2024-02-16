@@ -22,5 +22,5 @@ My research focuses on **Learning Perception and Navigation for Legged Robots**.
 During my Bachelor`s I have been working at the chair for **High Performance Humanoid Technologies** with Prof. Tamim Asfour (KIT, Germany) and conducted by Bachelor's Thesis with Prof. Takamitsu Matsubara in Japan (NAIST, Japan).
 I worked as a **Collaborative Robotics Engineer** at SEW-Eurodrive before starting my Master's in **Robotics Systems and Control** at ETH Zurich. Throught my Master's I was supervised by Prof. Roland Siegwart and spent most of my time at the **Autonmous Systems Lab**.
 
-During my Ph.D. I had the opportunity going to **NASA's Jet Propulation Labratory** and collaborating with the Dynamic Robotic Systems Group, Prof. Maurice Fallon in at **Oxford University**.
-If you have great research ideas or collaborations feel free to reach out to me via mail.
+During my Ph.D. I joined **NASA's Jet Propulation Labratory** as a visiting researcher and continously collaborate with the Dynamic Robotic Systems Group by Prof. Maurice Fallon at **Oxford University**.
+Feel free to reach out to me! I am always happy to discuss and exchange research ideas.
