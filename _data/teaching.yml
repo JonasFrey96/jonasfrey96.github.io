@@ -1,18 +1,18 @@
 # https://github.com/CMU-MultiComp-Lab/mmml-course/blob/master/fall2022/_pages/schedule.md 
-# - date: 02/2024
-#   title: >
-#     Lecture: Perception and Learning for Robotics: <br/>
-#     <strong>Lecture</strong>
-#   slides: "abc"
-#   video: "https://youtu.be/VIq5r7mCAyw"
-#   topics:
-#     - Machine Learning Project <br/>
-#     - ABC
-#     - DEF
-#   readings:
-#     - Some things to read
-#   logistics:
-#     - ABC
+- date: 02/2024
+  title: >
+    Lecture: Perception and Learning for Robotics: <br/>
+    <strong>Lecture</strong>
+  slides: "TBD"
+  video: "TBD"
+  topics:
+    - Machine Learning Project <br/>
+  readings:
+    - Some nice books
+    - Some nice books
+  logistics:
+    - Things that you want to do 1
+    - Things that you want to do 2
 # 
 # - date: 03/2023
 #   title: >
