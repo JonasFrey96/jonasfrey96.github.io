@@ -1,0 +1,46 @@
+# - date: 02/2024
+#   title: >
+#     Lecture: Perception and Learning for Robotics: <br/>
+#     <strong>Lecture</strong>
+#   slides: "abc"
+#   video: "https://youtu.be/VIq5r7mCAyw"
+#   topics:
+#     - Machine Learning Project <br/>
+#     - ABC
+#     - DEF
+#   readings:
+#     - Some things to read
+#   logistics:
+#     - ABC
+# 
+# - date: 03/2023
+#   title: >
+#     Teaching Assistent <br/>
+#     <strong>PLR</strong>
+#   slides: "https://piazza.com/class_profile/get_resource/kcnr11wq24q6z7/kemfewi19ex6cc"
+#   video: "https://youtu.be/fBYu8I52nVM"
+#   topics:
+#   readings:
+#   logistics:
+# 
+# - date: 03/2022
+#   title: >
+#     Teaching Assistent <br/>
+#     <strong>PLR</strong>
+#   slides: "https://piazza.com/class_profile/get_resource/kcnr11wq24q6z7/kemfewi19ex6cc"
+#   video: "https://youtu.be/fBYu8I52nVM"
+#   topics:
+#   readings:
+#   logistics:
+# 
+# - date: 03/2019
+#   title: >
+#     Teaching Assistent KIT <br/>
+#     <strong>PLR</strong>
+#   slides: "https://piazza.com/class_profile/get_resource/kcnr11wq24q6z7/kemfewi19ex6cc"
+#   video: "https://youtu.be/fBYu8I52nVM"
+#   topics:
+#   readings:
+#     - Baltrusaitis et al., <a href="https://arxiv.org/pdf/1705.09406.pdf" target="_blank">Multimodal Learning</a> <br/>
+#     - Bengio et al., <a href="https://arxiv.org/pdf/1206.5538.pdf" target="_blank">Representation Learning</a>
+#   logistics:
