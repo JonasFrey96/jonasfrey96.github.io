@@ -26,11 +26,6 @@ Here you can find my [GoogleScholar](https://scholar.google.com/citations?user=E
 ### Perception
 
 <div class="publications">
-  {% bibliography --group_by none --query @*[other=true]* %}
+  {% bibliography --group_by none --query @*[perception=true]* %}
 </div>
 
-{%- for y in page.years %}
-
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f {{ site.scholar.bibliography }} -q @*[year={{y}}]* %}
-{% endfor %}
