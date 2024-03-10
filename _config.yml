@@ -283,8 +283,8 @@ display_categories: ["blockquotes"] # these categories will be displayed on the 
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Frey]
+  first_name: [Jonas, J.]
 
   style: apa
   locale: en
@@ -311,6 +311,7 @@ scholar:
 enable_publication_badges:
   altmetric: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
   dimensions: true # Dimensions badge (https://badge.dimensions.ai/)
+  google_scholar: true
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
