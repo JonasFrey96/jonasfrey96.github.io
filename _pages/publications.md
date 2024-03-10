@@ -8,8 +8,8 @@ nav_order: 1
 ---
 
 <!-- _pages/publications.md -->
-Here you can find my [GoogleScholar](https://scholar.google.com/citations?user=Ef13BU4AAAAJ&hl=de&oi=ao)
 
+Here you can find my [GoogleScholar](https://scholar.google.com/citations?user=Ef13BU4AAAAJ&hl=de&oi=ao)
 
 ### Navigation
 
@@ -29,9 +29,8 @@ Here you can find my [GoogleScholar](https://scholar.google.com/citations?user=E
   {% bibliography --group_by none --query @*[other=true]* %}
 </div>
 
-
-
 {%- for y in page.years %}
+
   <h2 class="year">{{y}}</h2>
   {% bibliography -f {{ site.scholar.bibliography }} -q @*[year={{y}}]* %}
 {% endfor %}

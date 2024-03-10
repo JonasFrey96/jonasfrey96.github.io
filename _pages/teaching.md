@@ -18,9 +18,9 @@ nav_order: 3
 {% assign today_date = "now" | date: "%s" | divided_by: 86400 %}
 {% assign lecture_date = lecture.date | date: "%s" | divided_by: 86400 %}
 {% if today_date > lecture_date %}
-    {% assign event_type = "past" %}
+{% assign event_type = "past" %}
 {% elsif today_date <= lecture_date and today_date > prev_date %}
-    {% assign event_type = "warning" %}
+{% assign event_type = "warning" %}
 {% endif %}
 {% assign prev_date = lecture_date %}
 
