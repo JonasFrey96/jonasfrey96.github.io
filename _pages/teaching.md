@@ -24,6 +24,7 @@ pretty_table: true
 
 ---
 
+## Teaching
 
 <table id="table" data-toggle="table" data-url="{{ '/assets/json/teaching.json' | relative_url }}">
   <thead>
@@ -35,4 +36,11 @@ pretty_table: true
   </thead>
 </table>
 
+---
 
+## Student Publications
+- 1x IROS
+- 3x ICRA
+- 1x CVPR
+- 1x CORL
+- 2x RA-L
