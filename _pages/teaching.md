@@ -1,65 +1,38 @@
 ---
-layout: page
+layout: default
 permalink: /teaching/
 title: Teaching
 description: Teaching Experience.
 nav: true
 nav_order: 3
+pretty_table: true
 ---
 
 
-{% assign current_module = 0 %}
-{% assign skip_classes = 0 %}
-{% assign prev_date = 0 %}
 
-{% for item in site.data.teaching %}
-{% if item.date %}
-{% assign lecture = item %}
-{% assign event_type = "upcoming" %}
-{% assign today_date = "now" | date: "%s" | divided_by: 86400 %}
-{% assign lecture_date = lecture.date | date: "%s" | divided_by: 86400 %}
-{% if today_date > lecture_date %}
-{% assign event_type = "past" %}
-{% elsif today_date <= lecture_date and today_date > prev_date %}
-{% assign event_type = "warning" %}
-{% endif %}
-{% assign prev_date = lecture_date %}
 
-<tr class="{{ event_type }}">
-    <th scope="row">{{ lecture.date }}</th>
-    {% if lecture.title contains 'lectures' %}
-    {% assign skip_classes = skip_classes | plus: 1 %}
-    <td colspan="4">{{ lecture.title }}</td>
-    {% else %}
-    <td>
-        {{ lecture.title }}
-        <br />
-        [
-            {% if lecture.slides %}
-              <a href="{{ lecture.slides }}" target="_blank">slides</a>
-            {% else %}
-              slides
-            {% endif %}
-            {% if lecture.annotated %}
-              (<a href="{{ lecture.annotated }}" target="_blank">annotated</a>)
-            {% endif %}
-            {% if lecture.video %}
-            | <a href="{{ lecture.video }}" target="_blank">video</a>
-            {% else %}
-            | video
-            {% endif %}
-        ]
-    </td>
-    <td>
-        <p>{{ lecture.topics }}</p>
-    </td>
-    {% endif %}
-</tr>
-{% else %}
-{% assign current_module = current_module | plus: 1 %}
-{% assign module = item %}
-<tr class="info">
-    <td colspan="5" align="center"><strong>{{ module.title }}</strong></td>
-</tr>
-{% endif %}
-{% endfor %}
+## Lectures
+
+<div class="row mt-3">
+    <div class="PLR Lecture - ML Project" style="width:960px; margin:0 auto;">
+        {% include video.liquid path="https://www.youtube.com/embed/1NcluUFDwxo?si=37kSDhNcKdO_MZZ3" class="img-fluid rounded z-depth-1" height=540 width=960 controls=true autoplay=false %}
+    </div>
+</div>
+<div class="caption">
+    Perception and Learning for Robotics - Best Practices for your ML-Project 
+</div>
+
+---
+
+
+<table id="table" data-toggle="table" data-url="{{ '/assets/json/teaching.json' | relative_url }}">
+  <thead>
+    <tr>
+      <th data-field="date">Date</th>
+      <th data-field="name">Type</th>
+      <th data-field="description">Description</th>
+    </tr>
+  </thead>
+</table>
+
+
