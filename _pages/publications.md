@@ -29,3 +29,11 @@ Here you can find my [GoogleScholar](https://scholar.google.com/citations?user=E
   {% bibliography --group_by none --query @*[perception=true]* %}
 </div>
 
+
+--- 
+
+### Workshops
+
+<div class="publications">
+  {% bibliography --group_by none --query @*[workshop=true]* %}
+</div>
