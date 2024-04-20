@@ -17,6 +17,13 @@ Here you can find my [GoogleScholar](https://scholar.google.com/citations?user=E
   {% bibliography --group_by none --query @*[nav=true]* %}
 </div>
 
+### Learning
+
+<div class="publications">
+  {% bibliography --group_by none --query @*[learning=true]* %}
+</div>
+
+
 ### Locomotion
 
 <div class="publications">
