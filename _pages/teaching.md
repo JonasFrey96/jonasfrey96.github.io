@@ -8,9 +8,6 @@ nav_order: 3
 pretty_table: true
 ---
 
-
-
-
 ## Lectures
 
 <div class="row mt-3">
@@ -39,6 +36,7 @@ pretty_table: true
 ---
 
 ## Student Publications
+
 - 1x IROS
 - 3x ICRA
 - 1x CVPR

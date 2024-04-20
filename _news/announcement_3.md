@@ -5,9 +5,9 @@ inline: true
 related_posts: false
 ---
 
-
-Our paper "Resilient Legged Local Navigation: Learning to Traverse with Compromised Perception End-to-End," has been nominated for the Best Paper Award for ICRA2024! 
+Our paper "Resilient Legged Local Navigation: Learning to Traverse with Compromised Perception End-to-End," has been nominated for the Best Paper Award for ICRA2024!
 Key Insights:
+
 - **Unreliable Perception Systems**: It's impossible to always guarantee the reliability of perception systems.
 - **Need for Advanced Planning**: There is a critical need for planners that can detect failures in perception systems and react appropriately.
 - **Use of Proprioceptive Data**: Detecting these failures is feasible through the use of proprioceptive data.
