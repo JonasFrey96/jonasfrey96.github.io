@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /teaching/
-title: Teaching
+title: Teaching & Honors
 description: Teaching Experience.
 nav: true
 nav_order: 3
@@ -27,6 +27,45 @@ pretty_table: true
     Perception and Learning for Robotics - Best Practices for your ML-Project 
 </div>
 ---
+
+## Honors
+
+<ul id="honors-list" style="list-style-type: disc; padding-left: 1.5em;"></ul>
+
+<script>
+  fetch('/assets/json/honors.json')
+    .then(response => response.json())
+    .then(data => {
+      const list = document.getElementById('honors-list');
+
+      data.forEach(entry => {
+        const listItem = document.createElement('li');
+
+        const authorsFormatted = (entry.authors || '').replace(/Jonas Frey/g, '<strong>Jonas Frey</strong>');
+
+        const titleLink = entry.url
+          ? `<a href="${entry.url}" target="_blank" rel="noopener noreferrer">${entry.title}</a>`
+          : entry.title;
+
+        listItem.innerHTML = `
+          <div style="margin-bottom: 1em;">
+            <strong>Venue:</strong> ${entry.venue || ''}<br>
+            <strong>Award:</strong> ${entry.honor || ''}<br>
+            <strong>Paper:</strong> ${titleLink}<br>
+            <strong>Authors:</strong> ${authorsFormatted}
+          </div>
+        `;
+
+        list.appendChild(listItem);
+      });
+    })
+    .catch(error => {
+      console.error('Error loading honors data:', error);
+    });
+</script>
+
+---
+
 
 ## Teaching
 
