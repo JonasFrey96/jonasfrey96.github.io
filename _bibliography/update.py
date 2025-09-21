@@ -52,13 +52,6 @@ if __name__ == "__main__":
                 'CoRL'
             ],
         },
-        'tro': {
-            'fields': ['booktitle', 'journal'],
-            'keywords': [
-                'IEEE Transactions on Robotics',
-                'TRO'
-            ],
-        },
         'ram': {
             'fields': ['booktitle', 'journal'],
             'keywords': [
@@ -72,6 +65,43 @@ if __name__ == "__main__":
             'keywords': [
                 'Neural Information Processing Systems',
                 'NeurIPS'
+            ],
+        },
+        'tro': {
+        'fields': ['booktitle', 'journal'],
+        'keywords': [
+            'IEEE Transactions on Robotics',
+            'TRO'
+        ],
+        },
+        'ram': {
+            'fields': ['booktitle', 'journal'],
+            'keywords': [
+                'IEEE Robotics & Automation Magazine',
+                'Robotics & Automation Magazine',
+                'RAM'
+            ],
+        },
+        'ijrr': {
+            'fields': ['booktitle', 'journal'],
+            'keywords': [
+                'International Journal of Robotics Research',
+                'IJRR'
+            ],
+        },
+        'auro': {
+            'fields': ['booktitle', 'journal'],
+            'keywords': [
+                'Autonomous Robots',
+                'AuRo'
+            ],
+        },
+        'tfr': {
+            'fields': ['booktitle', 'journal'],
+            'keywords': [
+                'IEEE Transactions on Field Robotics',
+                'Field Robotics',
+                'TFR'
             ],
         },
     }

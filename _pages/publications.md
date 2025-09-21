@@ -8,27 +8,42 @@ nav_order: 1
 
 
 conferences:
-  - key: CoRL
-    label: CoRL
-    query: '@*[corl=true]*'
   - key: ICRA
     label: ICRA
     query: '@*[icra=true]*'
   - key: IROS
     label: IROS
     query:  '@*[iros=true]*'
+  - key: RSS
+    label: RSS
+    query: '@*[rss=true]*'
+  - key: CoRL
+    label: CoRL
+    query: '@*[corl=true]*'
   - key: CVPR
     label: CVPR
-    query: '@*[icml=true]*'
-  - key: RAL
-    label: RAL
-    query: '@*[ral=true]*'
+    query: '@*[cvpr=true]*'
   - key: ICML
     label: ICML
     query: '@*[icml=true]*'
-  - key: Workshop
-    label: Workshops
-    query: '@*[workshop=true]*'
+  - key: TRO
+    label: TRO
+    query: '@*[tro=true]*'
+  - key: RAM
+    label: RAM
+    query: '@*[ram=true]*'
+  - key: RAL
+    label: RAL
+    query: '@*[ral=true]*'
+  - key: IJRR
+    label: IJRR
+    query: '@*[ijrr=true]*'
+  - key: AuRo
+    label: AuRo
+    query: '@*[auro=true]*'
+  - key: TFR
+    label: TFR
+    query: '@*[tfr=true]*'
 
 topics:
   - key: nav
@@ -43,6 +58,9 @@ topics:
   - key: perception
     label: Perception
     query: '@*[perception=true]*'
+  - key: Workshop
+    label: Workshops
+    query: '@*[workshop=true]*'
 ---
 
 Here you can find my [GoogleScholar](https://scholar.google.com/citations?user=Ef13BU4AAAAJ&hl=de&oi=ao)
