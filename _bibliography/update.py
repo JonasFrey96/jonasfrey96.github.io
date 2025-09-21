@@ -25,7 +25,7 @@ if __name__ == "__main__":
             ],
         },
         'ral': {
-            'fields': ['booktitle', 'journal', 'venue'],
+            'fields': ['booktitle', 'journal'],
             'keywords': [
                 'Robotics and Automation Letters',
                 'RAL'
@@ -55,8 +55,7 @@ if __name__ == "__main__":
         'ram': {
             'fields': ['booktitle', 'journal'],
             'keywords': [
-                'IEEE Robotics & Automation Magazine',
-                'Robotics & Automation Magazine',
+                'Automation Magazine',
                 'RAM'
             ],
         },
@@ -71,7 +70,6 @@ if __name__ == "__main__":
         'fields': ['booktitle', 'journal'],
         'keywords': [
             'IEEE Transactions on Robotics',
-            'TRO'
         ],
         },
         'ram': {
