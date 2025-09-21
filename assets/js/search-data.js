@@ -50,6 +50,9 @@ ninja.data = [{
           section: "News",},{id: "news-i-ve-officially-finished-my-ph-d-supervised-by-marco-hutter-georg-martius-and-cesar-cadena-deep-thanks-to-my-committee-members-and-long-term-collaborators-maurice-fallon-and-shehryar-khattak-for-their-support-over-the-years",
           title: 'I’ve officially finished my Ph.D., supervised by Marco Hutter, Georg Martius, and Cesar...',
           description: "",
+          section: "News",},{id: "news-i-started-my-postdoc-at-stanford-autonmous-system-lab-with-prof-marco-pavone-and-uc-berkeley-bair-with-prof-jitendra-malik",
+          title: 'I started my PostDoc at Stanford (Autonmous System Lab) with Prof. Marco Pavone...',
+          description: "",
           section: "News",},{
       id: 'light-theme',
       title: 'Change theme to light',
