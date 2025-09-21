@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://rsl.ethz.ch/the-lab/people.html'>Robotic Systems Lab - ETH Zurich</a> / <a href='https://al.is.mpg.de/people'>Max Planck Institute</a>
+subtitle: <a href='https://stanfordasl.github.io//people/'>Autonomous Systems Lab - Stanford</a> / <a href='https://people.eecs.berkeley.edu/~malik/'>Berkeley AI Research (BAIR)</a>
 profile:
   align: right
   image: profile_pic.jpg
@@ -21,12 +21,12 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-I am a PostDoc at Stanford (Autonmous System Lab) with Marco Pavone and UC Berkeley (BAIR) with Jitendra Malik.
-My research focuses on **Learning Perception and Navigation for Legged Robots** with a focus on combining **RL policies and Large Behaviour Models**.
+I am a PostDoc at Stanford (Autonomous System Lab) with Prof. Marco Pavone and UC Berkeley (BAIR) with Prof. Jitendra Malik.
+My research focuses on **Learning Perception and Navigation for Legged Robots** with a focus on training **RL policies and Large Behaviour Models**.
 
 I obtained my Ph.D. in robotics at the Robotic Systems Lab at **ETH Zurich** and the **Max Planck Institute** for Intelligent Systems, co-advised by Prof. Marco Hutter and Prof. Georg Martius.
 During my Ph.D. I joined **NASA's Jet Propulsion Laboratory** as a visiting researcher and continuously collaborate with the Dynamic Robotic Systems Group by Prof. Maurice Fallon at **University of Oxford**.
-I worked as a **Collaborative Robotics Engineer** at SEW-Eurodrive before starting my Master's in **Robotics Systems and Control** at ETH Zurich. Throughout my Master's I was supervised by Prof. Roland Siegwart and spent most of my time at the **Autonmous Systems Lab**.
+I worked as a **Collaborative Robotics Engineer** at SEW-Eurodrive before starting my Master's in **Robotics Systems and Control** at ETH Zurich. Throughout my Master's I was supervised by Prof. Roland Siegwart and spent most of my time at the **Autonomous Systems Lab**.
 During my Bachelor's, I worked at the chair for **High Performance Humanoid Technologies** with Prof. Tamim Asfour (KIT, Germany) and conducted my Bachelor's Thesis with Prof. Takamitsu Matsubara in Japan (NAIST, Japan).
 
 <div style="margin-top: 50px; margin-bottom: 0px;">

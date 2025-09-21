@@ -28,21 +28,6 @@ pretty_table: true
 </div>
 ---
 
-## Student Publications
-I have had the great fortune to work with and advise outstanding Master students through their theses, semester projects, and coursework. Thanks to their excellent work and dedication, they have published at:
-
-| Venue      | Number of Publications |
-|------------|-----------------------|
-| CoRL       | 1                     |
-| ICRA       | 4                     |
-| IROS       | 1                     |
-| CVPR       | 1                     |
-| RAL        | 4                     |
-| Workshops  | 2                     |
-| RLC        | 1                     |
-| ICML       | 1                     |
-
-
 ## Honors
 
 <ul id="honors-list" style="list-style-type: disc; padding-left: 1.5em;"></ul>
@@ -81,6 +66,43 @@ I have had the great fortune to work with and advise outstanding Master students
 
 ---
 
+
+## Student Publications
+I have had the great fortune to work with and advise outstanding Master students through their theses, semester projects, and coursework. Thanks to their excellent work and dedication, they have published at:
+
+<div style="display: flex; justify-content: center; margin: 1em 0;">
+  <table style="
+    font-size: 0.9em;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 320px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(50,115,220,0.08);
+    border: 1px solid #eee;
+  ">
+    <thead>
+      <tr style="background: #f7f7f7;">
+        <th style="padding: 0.25em 0.7em; text-align: left; border-bottom: 1px solid #eee;">Venue</th>
+        <th style="padding: 0.25em 0.7em; text-align: left; border-bottom: 1px solid #eee;">Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">CoRL</td><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">1</td></tr>
+      <tr><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">ICRA</td><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">4</td></tr>
+      <tr><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">IROS</td><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">1</td></tr>
+      <tr><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">CVPR</td><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">1</td></tr>
+      <tr><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">RAL</td><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">4</td></tr>
+      <tr><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">Workshops</td><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">2</td></tr>
+      <tr><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">RLC</td><td style="padding: 0.15em 0.7em; border-bottom: 1px solid #f0f0f0;">1</td></tr>
+      <tr><td style="padding: 0.15em 0.7em;">ICML</td><td style="padding: 0.15em 0.7em;">1</td></tr>
+    </tbody>
+  </table>
+</div>
+
+---
 
 ## Teaching
 
