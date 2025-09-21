@@ -28,6 +28,21 @@ pretty_table: true
 </div>
 ---
 
+## Student Publications
+I have had the great fortune to work with and advise outstanding Master students through their theses, semester projects, and coursework. Thanks to their excellent work and dedication, they have published at:
+
+| Venue      | Number of Publications |
+|------------|-----------------------|
+| CoRL       | 1                     |
+| ICRA       | 4                     |
+| IROS       | 1                     |
+| CVPR       | 1                     |
+| RAL        | 4                     |
+| Workshops  | 2                     |
+| RLC        | 1                     |
+| ICML       | 1                     |
+
+
 ## Honors
 
 <ul id="honors-list" style="list-style-type: disc; padding-left: 1.5em;"></ul>
