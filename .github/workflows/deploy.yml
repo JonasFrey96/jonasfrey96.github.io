@@ -59,6 +59,9 @@ on:
       - "!FAQ.md"
       - "!INSTALL.md"
       - "!README.md"
+  schedule:
+    - cron: '0 3 * * *' # Runs every day at 03:00 UTC
+    
   workflow_dispatch:
 
 permissions:
