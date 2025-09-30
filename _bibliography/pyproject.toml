@@ -1,0 +1,8 @@
+[project]
+name = "update_bib"
+version = "0.1.0"
+description = "Run main.py with Python 3.8 and bibtexparser"
+dependencies = ["bibtexparser"]
+
+[tool.uv.scripts]
+run = "python update_bib.py"
