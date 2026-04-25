@@ -26,11 +26,16 @@ module Jekyll
     end
 
     def render(context)
-      # Disable fetching in CI environments
-
       article_id = context[@article_id.strip]
       scholar_id = context[@scholar_id.strip]
       article_url = "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=#{scholar_id}&citation_for_view=#{scholar_id}:#{article_id}"
+
+      # Skip fetching outside of production builds — return a random placeholder
+      # so local `docker compose up` doesn't hit Google Scholar for every paper.
+      if ENV['JEKYLL_ENV'] != 'production'
+        GoogleScholarCitationsTag::Citations[article_id] ||= rand(0..100).to_s
+        return GoogleScholarCitationsTag::Citations[article_id]
+      end
 
       begin
           # If the citation count has already been fetched, return it
@@ -45,7 +50,7 @@ module Jekyll
           doc = Nokogiri::HTML(URI.open(article_url, "User-Agent" => "Ruby/#{RUBY_VERSION}"))
 
           # Attempt to extract the "Cited by n" string from the meta tags
-          citation_count = 0
+          citation_count = nil
 
           # Look for meta tags with "name" attribute set to "description"
           description_meta = doc.css('meta[name="description"]')
@@ -68,7 +73,14 @@ module Jekyll
             end
           end
 
-        citation_count = Helpers.number_to_human(citation_count, :format => '%n%u', :precision => 2, :units => { :thousand => 'K', :million => 'M', :billion => 'B' })
+          # If we couldn't extract a citation count (likely blocked or missing data),
+          # return "N/A" instead of falsely reporting 0 citations.
+          if citation_count.nil?
+            citation_count = "N/A"
+            puts "Could not extract citation count for #{article_id} in #{article_url} (likely blocked or page structure changed)"
+          else
+            citation_count = Helpers.number_to_human(citation_count, :format => '%n%u', :precision => 2, :units => { :thousand => 'K', :million => 'M', :billion => 'B' })
+          end
 
       rescue Exception => e
         # Handle any errors that may occur during fetching

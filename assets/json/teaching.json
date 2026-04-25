@@ -1,5 +1,15 @@
 [
     {
+      "date": "2026",
+      "name": "Guest Lecturer",
+      "description": "Navigation - CS 294-277 Robots That Learn - UC Berkeley - Prof. Jitendra Malik"
+    },
+    {
+      "date": "2025",
+      "name": "Guest Lecturer",
+      "description": "Computer Vision - AA 274A: Principles of Robot Autonomy - Stanford - Prof. Marco Pavone"
+    },
+    {
       "date": "2024-2025",
       "name": "Instructor",
       "description": "Perception and Learning for Robotics - ETH Zurich - Dr. Cesar Cadena"

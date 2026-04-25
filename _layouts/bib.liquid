@@ -1,6 +1,29 @@
 ---
 ---
-<div class="row">
+{%- comment -%}Build a space-separated list of venue tags for filtering{%- endcomment -%}
+{% assign venue_tags = "" %}
+{% if entry.icra %}{% assign venue_tags = venue_tags | append: "icra " %}{% endif %}
+{% if entry.iros %}{% assign venue_tags = venue_tags | append: "iros " %}{% endif %}
+{% if entry.rss %}{% assign venue_tags = venue_tags | append: "rss " %}{% endif %}
+{% if entry.corl %}{% assign venue_tags = venue_tags | append: "corl " %}{% endif %}
+{% if entry.cvpr %}{% assign venue_tags = venue_tags | append: "cvpr " %}{% endif %}
+{% if entry.icml %}{% assign venue_tags = venue_tags | append: "icml " %}{% endif %}
+{% if entry.tro %}{% assign venue_tags = venue_tags | append: "tro " %}{% endif %}
+{% if entry.ram %}{% assign venue_tags = venue_tags | append: "ram " %}{% endif %}
+{% if entry.ral %}{% assign venue_tags = venue_tags | append: "ral " %}{% endif %}
+{% if entry.ijrr %}{% assign venue_tags = venue_tags | append: "ijrr " %}{% endif %}
+{% if entry.auro %}{% assign venue_tags = venue_tags | append: "auro " %}{% endif %}
+{% if entry.tfr %}{% assign venue_tags = venue_tags | append: "tfr " %}{% endif %}
+{% if entry.neurips %}{% assign venue_tags = venue_tags | append: "neurips " %}{% endif %}
+{% assign topic_tags = "" %}
+{% if entry.nav %}{% assign topic_tags = topic_tags | append: "nav " %}{% endif %}
+{% if entry.learning %}{% assign topic_tags = topic_tags | append: "learning " %}{% endif %}
+{% if entry.loc %}{% assign topic_tags = topic_tags | append: "loc " %}{% endif %}
+{% if entry.perception %}{% assign topic_tags = topic_tags | append: "perception " %}{% endif %}
+{% if entry.workshop %}{% assign topic_tags = topic_tags | append: "workshop " %}{% endif %}
+{% assign is_preprint = "false" %}
+{% if entry.preprint %}{% assign is_preprint = "true" %}{% endif %}
+<div class="row publication-entry" data-year="{{ entry.year }}" data-venues="{{ venue_tags | strip }}" data-topics="{{ topic_tags | strip }}" data-preprint="{{ is_preprint }}">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
@@ -312,16 +335,19 @@
             ></span>
           {% endif %}
           {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
-            <a
-              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}"
-              aria-label="Google Scholar link"
-              role="button"
-            >
-              <img
-                src="https://img.shields.io/badge/scholar-{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %}-4285F4?logo=googlescholar&labelColor=beige"
-                alt="{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %} Google Scholar citations"
+            {% capture gs_cite_count %}{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %}{% endcapture %}
+            {% unless gs_cite_count == "N/A" or gs_cite_count == "0" %}
+              <a
+                href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}"
+                aria-label="Google Scholar link"
+                role="button"
               >
-            </a>
+                <img
+                  src="https://img.shields.io/badge/scholar-{{ gs_cite_count }}-4285F4?logo=googlescholar&labelColor=beige"
+                  alt="{{ gs_cite_count }} Google Scholar citations"
+                >
+              </a>
+            {% endunless %}
           {% endif %}
           {% if site.enable_publication_badges.inspirehep and entry_has_inspirehep_badge %}
             <a

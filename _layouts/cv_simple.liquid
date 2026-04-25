@@ -1,27 +1,77 @@
 ---
 layout: default
 ---
-  <div class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if page.cv_pdf %}
-          <a
-            {% if page.cv_pdf contains '://' %}
-              href="{{ page.cv_pdf }}"
-            {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
-            {% endif %}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
-          >
-            <i class="fa-solid fa-file-pdf"></i>
-          </a>
-        {% endif %}
-      </h1>
-      {% if page.description %}
-        <p class="post-description">{{ page.description }}</p>
+{% if page.cv_pdf contains '://' %}
+  {% assign cv_pdf_url = page.cv_pdf %}
+{% else %}
+  {% assign cv_pdf_url = page.cv_pdf | prepend: 'assets/pdf/' | relative_url %}
+{% endif %}
+
+<div class="post cv-page">
+  <header class="post-header">
+    <h1 class="post-title">
+      {{ page.title }}
+      {% if page.cv_pdf %}
+        <a
+          href="{{ cv_pdf_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="float-right"
+          aria-label="Open CV PDF in new tab"
+          title="Open CV PDF in new tab"
+        >
+          <i class="fa-solid fa-file-pdf"></i>
+        </a>
       {% endif %}
-    </header>
-  </div>
+    </h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  {% if page.cv_pdf %}
+    <article>
+      <div class="cv-actions">
+        <a
+          href="{{ cv_pdf_url }}"
+          download
+          class="btn btn-cv-action"
+          aria-label="Download CV as PDF"
+        >
+          <i class="fa-solid fa-download"></i>
+          <span>Download PDF</span>
+        </a>
+        <a
+          href="{{ cv_pdf_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-cv-action btn-cv-action--secondary"
+          aria-label="Open CV PDF in a new tab"
+        >
+          <i class="fa-solid fa-up-right-from-square"></i>
+          <span>Open in new tab</span>
+        </a>
+      </div>
+
+      <div class="cv-pdf-frame" role="region" aria-label="Embedded CV preview">
+        <object
+          data="{{ cv_pdf_url }}#view=FitH&toolbar=1&navpanes=0"
+          type="application/pdf"
+          class="cv-pdf-object"
+        >
+          <iframe
+            src="{{ cv_pdf_url }}#view=FitH&toolbar=1&navpanes=0"
+            class="cv-pdf-iframe"
+            title="CV PDF preview"
+            loading="lazy"
+          >
+          </iframe>
+          <p class="cv-pdf-fallback">
+            Your browser does not support inline PDF previews.
+            <a href="{{ cv_pdf_url }}" target="_blank" rel="noopener noreferrer">Click here to view the CV.</a>
+          </p>
+        </object>
+      </div>
+    </article>
+  {% endif %}
+</div>
