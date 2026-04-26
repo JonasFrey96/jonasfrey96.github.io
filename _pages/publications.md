@@ -26,7 +26,6 @@ topics:
   - { key: learning,   label: Learning }
   - { key: loc,        label: Locomotion }
   - { key: perception, label: Perception }
-  - { key: workshop,   label: Workshops }
 ---
 
 Here you can find my [GoogleScholar](https://scholar.google.com/citations?user=Ef13BU4AAAAJ&hl=de&oi=ao)
@@ -43,6 +42,20 @@ Here you can find my [GoogleScholar](https://scholar.google.com/citations?user=E
   background: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
   border-radius: 12px;
+}
+.pub-controls .workshop-toggle {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.85em;
+  color: var(--global-text-color);
+  cursor: pointer;
+  user-select: none;
+}
+.pub-controls .workshop-toggle input {
+  accent-color: var(--global-theme-color);
+  cursor: pointer;
 }
 .pub-controls .sort-label {
   font-size: 0.85em;
@@ -133,6 +146,10 @@ Here you can find my [GoogleScholar](https://scholar.google.com/citations?user=E
   <span class="sort-label">Sort:</span>
   <button class="sort-btn active" data-sort="citations">Most cited</button>
   <button class="sort-btn" data-sort="year">Year</button>
+
+  <label class="workshop-toggle">
+    <input type="checkbox" id="show-workshops"> Show workshop papers
+  </label>
 </div>
 
 <div id="publications-container">
@@ -162,14 +179,21 @@ Here you can find my [GoogleScholar](https://scholar.google.com/citations?user=E
   function applyFilter() {
     var venue = document.getElementById('venue-filter').value;
     var topic = document.getElementById('topic-filter').value;
+    var workshopsOnly = document.getElementById('show-workshops').checked;
     getItems().forEach(function(li) {
       var show = true;
-      if (venue && venue !== 'all') {
+      var topics = attrOf(li, 'data-topics').split(/\s+/);
+      var isWorkshop = topics.indexOf('workshop') !== -1;
+      if (workshopsOnly) {
+        if (!isWorkshop) show = false;
+      } else {
+        if (isWorkshop) show = false;
+      }
+      if (show && venue && venue !== 'all') {
         var venues = attrOf(li, 'data-venues').split(/\s+/);
         if (venues.indexOf(venue) === -1) show = false;
       }
       if (show && topic && topic !== 'all') {
-        var topics = attrOf(li, 'data-topics').split(/\s+/);
         if (topics.indexOf(topic) === -1) show = false;
       }
       li.style.display = show ? '' : 'none';
@@ -203,6 +227,7 @@ Here you can find my [GoogleScholar](https://scholar.google.com/citations?user=E
     if (topicSel.value !== 'all') venueSel.value = 'all';
     applyFilter();
   });
+  document.getElementById('show-workshops').addEventListener('change', applyFilter);
 
   document.querySelectorAll('.sort-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
