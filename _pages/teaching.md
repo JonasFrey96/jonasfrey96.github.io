@@ -10,9 +10,9 @@ pretty_table: true
 
 <style>
   .teaching-page {
-    max-width: 960px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0;
   }
   .teaching-page h2 {
     font-weight: 600;
@@ -34,7 +34,7 @@ pretty_table: true
     box-shadow: 0 6px 24px rgba(20, 40, 90, 0.08);
     border: 1px solid #eee;
     margin: 1.2em auto 0.4em auto;
-    max-width: 880px;
+    width: 100%;
   }
   .lecture-video {
     position: relative;
@@ -59,6 +59,87 @@ pretty_table: true
     background: #fafbfc;
     border-top: 1px solid #f0f0f0;
   }
+  .lecture-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em;
+    justify-content: center;
+    padding: 0.7em 0.8em 0.2em 0.8em;
+    background: #fafbfc;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .lecture-tab {
+    background: #f2f2f4;
+    border: 1px solid #e3e3e6;
+    color: #555;
+    border-radius: 999px;
+    padding: 0.3em 0.9em;
+    font-size: 0.88em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .lecture-tab:hover {
+    background: #e8e8ec;
+    color: #1a1a1a;
+  }
+  .lecture-tab.is-active {
+    background: #d9d9de;
+    color: #1a1a1a;
+    border-color: #c9c9ce;
+  }
+  .lecture-watch-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9em;
+    text-align: center;
+    padding: 1.2em;
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    pointer-events: auto;
+  }
+  .lecture-watch-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.7));
+  }
+  .lecture-watch-overlay > * {
+    position: relative;
+    z-index: 1;
+  }
+  .lecture-watch-overlay[hidden] { display: none; }
+  .lecture-watch-note {
+    font-size: 0.95em;
+    line-height: 1.5;
+    max-width: 36em;
+    color: #f3f3f3;
+  }
+  .lecture-watch-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    background: #ff0033;
+    color: #fff !important;
+    border-radius: 999px;
+    padding: 0.55em 1.2em;
+    font-weight: 700;
+    font-size: 0.95em;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .lecture-watch-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  }
 
   /* ---- Honors cards ---- */
   .honors-grid {
@@ -72,7 +153,7 @@ pretty_table: true
   .honor-card {
     background: #fff;
     border: 1px solid #eee;
-    border-left: 4px solid #3273dc;
+    border-left: 4px solid var(--global-theme-color);
     border-radius: 10px;
     padding: 0.9em 1.1em;
     box-shadow: 0 2px 10px rgba(20, 40, 90, 0.04);
@@ -100,7 +181,7 @@ pretty_table: true
     letter-spacing: 0.01em;
   }
   .honor-venue {
-    color: #3273dc;
+    color: var(--global-theme-color);
     font-weight: 600;
     font-size: 0.92em;
   }
@@ -116,8 +197,8 @@ pretty_table: true
     border-bottom: 1px dashed #cdd6e4;
   }
   .honor-title a:hover {
-    color: #3273dc;
-    border-bottom-color: #3273dc;
+    color: var(--global-theme-color);
+    border-bottom-color: var(--global-theme-color);
   }
   .honor-authors {
     color: #555;
@@ -157,7 +238,7 @@ pretty_table: true
   .pub-chip .pub-count {
     font-size: 1.6em;
     font-weight: 700;
-    color: #3273dc;
+    color: var(--global-theme-color);
     line-height: 1;
   }
 
@@ -175,6 +256,87 @@ pretty_table: true
   }
   html[data-theme="dark"] .pub-chip .pub-count {
     color: var(--global-theme-color);
+  }
+
+  /* ---- Dark mode for the rest of the teaching page ---- */
+  html[data-theme="dark"] .teaching-page h2 {
+    border-bottom-color: #3a3a3f;
+  }
+  html[data-theme="dark"] .lecture-card {
+    background: var(--global-card-bg-color);
+    border-color: #3a3a3f;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+  }
+  html[data-theme="dark"] .lecture-tabs,
+  html[data-theme="dark"] .lecture-caption {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: #2f2f33;
+    color: var(--global-text-color);
+  }
+  html[data-theme="dark"] .lecture-tab {
+    background: #2a2a2e;
+    border-color: #3a3a3f;
+    color: #cfcfd4;
+  }
+  html[data-theme="dark"] .lecture-tab:hover {
+    background: #34343a;
+    color: #fff;
+  }
+  html[data-theme="dark"] .lecture-tab.is-active {
+    background: #4a4a52;
+    border-color: #5a5a62;
+    color: #fff;
+  }
+
+  html[data-theme="dark"] .honor-card {
+    background: var(--global-card-bg-color);
+    border-color: #3a3a3f;
+    border-left-color: var(--global-theme-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  }
+  html[data-theme="dark"] .honor-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  }
+  html[data-theme="dark"] .honor-badge {
+    background: rgba(241, 217, 138, 0.12);
+    color: #f1d98a;
+    border-color: rgba(241, 217, 138, 0.3);
+  }
+  html[data-theme="dark"] .honor-title a {
+    color: var(--global-text-color);
+    border-bottom-color: #4a4a52;
+  }
+  html[data-theme="dark"] .honor-authors {
+    color: #b8b8be;
+  }
+  html[data-theme="dark"] .honor-authors strong {
+    color: var(--global-text-color);
+  }
+
+  html[data-theme="dark"] .teaching-row {
+    border-bottom-color: #2f2f33;
+  }
+  html[data-theme="dark"] .teaching-date {
+    color: #9aa3b2;
+  }
+  html[data-theme="dark"] .teaching-desc {
+    color: var(--global-text-color);
+  }
+  html[data-theme="dark"] .teaching-role.role-instructor {
+    background: rgba(30, 125, 58, 0.18);
+    color: #7ed99a;
+  }
+  html[data-theme="dark"] .teaching-role.role-guest {
+    background: rgba(178, 90, 0, 0.2);
+    color: #f0b072;
+  }
+  html[data-theme="dark"] .teaching-role.role-supervisor {
+    background: rgba(109, 40, 217, 0.22);
+    color: #c8a8ff;
+  }
+  html[data-theme="dark"] .teaching-role.role-ta {
+    background: rgba(120, 80, 200, 0.22);
+    color: #c8a8ff;
   }
 
   /* ---- Teaching timeline / list ---- */
@@ -200,8 +362,8 @@ pretty_table: true
   }
   .teaching-role {
     display: inline-block;
-    background: #eef3ff;
-    color: #2554c7;
+    background: #f3f4f6;
+    color: #4b5563;
     border-radius: 999px;
     padding: 0.15em 0.7em;
     font-size: 0.82em;
@@ -209,10 +371,10 @@ pretty_table: true
     width: fit-content;
     white-space: nowrap;
   }
-  .teaching-role.role-instructor   { background: #e6f4ea; color: #1e7d3a; }
-  .teaching-role.role-guest        { background: #fff1e6; color: #b25a00; }
-  .teaching-role.role-supervisor   { background: #f3e8ff; color: #6d28d9; }
-  .teaching-role.role-ta           { background: #eef3ff; color: #2554c7; }
+  .teaching-role.role-instructor   { background: #eef6f0; color: #3a7d52; }
+  .teaching-role.role-guest        { background: #f7efe6; color: #8a6336; }
+  .teaching-role.role-supervisor   { background: #f1ecf8; color: #6d28d9; }
+  .teaching-role.role-ta           { background: #f1ecf8; color: #6d28d9; }
   .teaching-desc {
     color: #1a1a1a;
     line-height: 1.45;
@@ -230,18 +392,77 @@ pretty_table: true
 
 ## Lectures
 
-<div class="lecture-card">
+<div class="lecture-card" id="lecture-card">
+  <div class="lecture-tabs" role="tablist">
+    <button type="button"
+            class="lecture-tab is-active"
+            role="tab"
+            data-embed="https://www.youtube.com/embed/1NcluUFDwxo?si=37kSDhNcKdO_MZZ3"
+            data-title="PLR Lecture - ML Project"
+            data-caption="Perception and Learning for Robotics — Best Practices for your ML-Project">
+      ETH Zurich - Project Best Practices
+    </button>
+    <button type="button"
+            class="lecture-tab"
+            role="tab"
+            data-embed="https://www.youtube.com/embed/5uWtpDON7Vs?si=JMWOVdvOc5w-ytws"
+            data-title="Stanford Robotics Seminar - Embodied Foundation Models"
+            data-caption="Stanford Robotics Seminar  - Embodied Foundation Models"
+            data-watch="https://www.youtube.com/watch?v=5uWtpDON7Vs"
+            data-watch-note="Embedding is disabled for this Stanford talk — please watch it directly on YouTube."
+            data-thumb="https://i.ytimg.com/vi/5uWtpDON7Vs/maxresdefault.jpg">
+      Stanford - Robotics Seminar
+    </button>
+  </div>
   <div class="lecture-video">
     <iframe
+      id="lecture-iframe"
       src="https://www.youtube.com/embed/1NcluUFDwxo?si=37kSDhNcKdO_MZZ3"
       title="PLR Lecture - ML Project"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen></iframe>
+    <div class="lecture-watch-overlay" id="lecture-watch-overlay" hidden>
+      <div class="lecture-watch-note" id="lecture-watch-note"></div>
+      <a class="lecture-watch-btn" id="lecture-watch-btn" href="#" target="_blank" rel="noopener noreferrer">
+        ▶ Watch on YouTube
+      </a>
+    </div>
   </div>
-  <div class="lecture-caption">
+  <div class="lecture-caption" id="lecture-caption">
     Perception and Learning for Robotics — Best Practices for your ML-Project
   </div>
 </div>
+
+<script>
+  (function () {
+    const card = document.getElementById('lecture-card');
+    if (!card) return;
+    const iframe = document.getElementById('lecture-iframe');
+    const caption = document.getElementById('lecture-caption');
+    const overlay = document.getElementById('lecture-watch-overlay');
+    const overlayNote = document.getElementById('lecture-watch-note');
+    const overlayBtn = document.getElementById('lecture-watch-btn');
+    const tabs = card.querySelectorAll('.lecture-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('is-active'));
+        tab.classList.add('is-active');
+        iframe.src = tab.dataset.embed;
+        iframe.title = tab.dataset.title;
+        caption.textContent = tab.dataset.caption;
+        if (tab.dataset.watch) {
+          overlayBtn.href = tab.dataset.watch;
+          overlayNote.textContent = tab.dataset.watchNote || '';
+          overlay.style.backgroundImage = tab.dataset.thumb ? `url("${tab.dataset.thumb}")` : '';
+          overlay.hidden = false;
+        } else {
+          overlay.hidden = true;
+          overlay.style.backgroundImage = '';
+        }
+      });
+    });
+  })();
+</script>
 
 ---
 
@@ -298,7 +519,6 @@ pretty_table: true
   <div class="pub-chip"><span class="pub-venue">RAL</span><span class="pub-count">4</span></div>
   <div class="pub-chip"><span class="pub-venue">ICML</span><span class="pub-count">1</span></div>
   <div class="pub-chip"><span class="pub-venue">RLC</span><span class="pub-count">1</span></div>
-  <div class="pub-chip"><span class="pub-venue">Workshops</span><span class="pub-count">2</span></div>
 </div>
 
 ---

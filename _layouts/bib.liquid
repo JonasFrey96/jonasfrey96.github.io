@@ -23,7 +23,12 @@
 {% if entry.workshop %}{% assign topic_tags = topic_tags | append: "workshop " %}{% endif %}
 {% assign is_preprint = "false" %}
 {% if entry.preprint %}{% assign is_preprint = "true" %}{% endif %}
-<div class="row publication-entry" data-year="{{ entry.year }}" data-venues="{{ venue_tags | strip }}" data-topics="{{ topic_tags | strip }}" data-preprint="{{ is_preprint }}">
+{% assign entry_citations = "0" %}
+{% if entry.google_scholar_id and site.data.socials.scholar_userid %}
+  {% capture entry_citations %}{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %}{% endcapture %}
+  {% if entry_citations == "N/A" or entry_citations == "" %}{% assign entry_citations = "0" %}{% endif %}
+{% endif %}
+<div class="row publication-entry" data-year="{{ entry.year }}" data-venues="{{ venue_tags | strip }}" data-topics="{{ topic_tags | strip }}" data-preprint="{{ is_preprint }}" data-citations="{{ entry_citations | strip }}">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
@@ -218,9 +223,6 @@
       {% if entry.abstract %}
         <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       {% endif %}
-      {% if entry.doi %}
-        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
-      {% endif %}
       {% if entry.arxiv %}
         <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
       {% endif %}
@@ -229,9 +231,9 @@
       {% endif %}
       {% if entry.html %}
         {% if entry.html contains '://' %}
-          <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+          <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">Paper</a>
         {% else %}
-          <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+          <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Paper</a>
         {% endif %}
       {% endif %}
       {% if entry.pdf %}

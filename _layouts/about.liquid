@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title" style="visibility:hidden;height:0;margin:0;overflow:hidden;">
+    <h1 class="post-title">
       {% if site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
         {{ site.last_name }}
@@ -11,11 +11,6 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
-
-    <!-- Robot dog walk-in animation -->
-    <div id="robot-dog-wrapper" style="width:100%;cursor:none;margin-bottom:0.4rem;user-select:none;">
-      <canvas id="robot-dog-canvas" style="display:block;width:100%;"></canvas>
-    </div>
 
     <p class="desc">{{ page.subtitle }}</p>
   </header>

@@ -179,10 +179,7 @@
   ></script>
 {% endif %}
 
-<!-- Robot Dog Animation (home page only) -->
-{% if page.permalink == '/' %}
-  <script defer src="{{ '/assets/js/robot-dog.js' | relative_url | bust_file_cache }}"></script>
-{% endif %}
+
 
 <!-- Load Common JS -->
 <script src="{{ '/assets/js/no_defer.js' | relative_url | bust_file_cache }}"></script>
